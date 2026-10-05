@@ -1,4 +1,7 @@
 <script lang="ts">
+  import type Self from "./Todo.svelte";
+  // the snippet below is an example only; importing the DSL is what marks it
+  import type { Test } from "../../../suede.sweater-vest/dsl.import.meta.vitest";
   import { renderer, renderable } from "../../../release";
   type Todo = {
     content: renderer.Content;
@@ -98,6 +101,11 @@
 </div>
 
 <p>{remaining()} remaining</p>
+
+<!-- example: the list as it starts, empty, to add todos to -->
+{#snippet empty(Todo: typeof Self)}
+  <Todo />
+{/snippet}
 
 <style>
   .todos {
