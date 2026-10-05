@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "svelte": "^5.55.0",
-    "typescript": "^5.9.3"
-  }
-}
