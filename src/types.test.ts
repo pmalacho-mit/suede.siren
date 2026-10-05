@@ -28,7 +28,7 @@ describe("ExtractRenderableEntry", () => {
         required: {
           property: renderable<CustomRenderableEntry>(
             "single",
-            renderable.required
+            renderable.required,
           ),
           standalone: renderable<CustomRenderableEntry>("single", (render) => ({
             dummy: 42,
@@ -202,7 +202,7 @@ describe("ExtractRenderableEntry", () => {
         required: {
           property: renderable<CustomRenderableEntry>(
             "multi",
-            renderable.required
+            renderable.required,
           ),
           standalone: renderable<CustomRenderableEntry>("multi", (render) => ({
             dummy: 42,
@@ -219,7 +219,7 @@ describe("ExtractRenderableEntry", () => {
                 dummy: 2,
                 renderable: render("..."),
               },
-            ]
+            ],
           ),
         },
       },

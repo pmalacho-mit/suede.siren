@@ -51,7 +51,7 @@
       model.items.append((render) => ({
         title: "Added item " + (model.items.current.length + 1),
         renderable: render(
-          "<em>Content for item " + (model.items.current.length + 1) + "</em>"
+          "<em>Content for item " + (model.items.current.length + 1) + "</em>",
         ),
       }))}
   >

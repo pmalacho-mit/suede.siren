@@ -63,7 +63,7 @@
     <button
       onclick={() =>
         items.append((render) =>
-          render(` ${(items.current?.length ?? 0) + 1}`)
+          render(` ${(items.current?.length ?? 0) + 1}`),
         )}
     >
       Add raw number

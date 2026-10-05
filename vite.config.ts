@@ -15,7 +15,11 @@ export default defineConfig({
       {
         extends: true,
         plugins: [namespaceTests({ exclude: libraries })],
-        test: { name: "unit", environment: "node", include: ["src/**/*.test.ts"] },
+        test: {
+          name: "unit",
+          environment: "node",
+          include: ["src/**/*.test.ts"],
+        },
       },
     ],
   },
