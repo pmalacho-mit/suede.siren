@@ -1,6 +1,6 @@
 # suede.siren
 
-Siren (<ins style="color:white"><sub style="color:grey">_svelte_</sub> <span style="color:#aa1e1e">**S**</span><sub>_n_</sub><span style="color:#aa1e1e">**i**</span><sub>_ppet_</sub> <span style="color:#aa1e1e">**ren**</span><sub>_derer_</sub></ins>)
+Siren (**S**<ins style="color:white"><sub style="color:grey">_velte_</sub> <span style="color:#aa1e1e">**S**</span><sub>_n_</sub><span style="color:#aa1e1e">**i**</span><sub>_ppet_</sub> <span style="color:#aa1e1e">**ren**</span><sub>_derer_</sub></ins>)
 
 This repo is a [suede dependency](https://github.com/pmalacho-mit/suede). 
 
