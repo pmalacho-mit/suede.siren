@@ -21,3 +21,7 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Scratch files from the suede test libraries
+*.temp.ts
+*.vest.temp.svelte

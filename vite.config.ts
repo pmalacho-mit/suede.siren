@@ -1,27 +1,21 @@
 import { defineConfig } from "vitest/config";
-//import devtoolsJson from "vite-plugin-devtools-json";
 import { sveltekit } from "@sveltejs/kit/vite";
-import path from "node:path";
+import sweaterVest from "./suede.sweater-vest/vite-plugin/plugin.ts";
+import namespaceTests from "./suede.nests/vite-plugin/plugin.mts";
+
+const libraries = ["suede.*/**"];
 
 export default defineConfig({
-  server: {
-    host: "0.0.0.0",
-    fs: {
-      allow: [path.resolve(__dirname, "release")],
-    },
-  },
-  plugins: [sveltekit()],
+  server: { host: "0.0.0.0" },
+  plugins: [sveltekit(), sweaterVest({ exclude: libraries })],
   test: {
     expect: { requireAssertions: true },
     projects: [
+      sweaterVest.project(),
       {
-        extends: "./vite.config.ts",
-        test: {
-          name: "server",
-          environment: "node",
-          include: ["src/**/*.{test,spec}.{js,ts}"],
-          exclude: ["src/**/*.svelte.{test,spec}.{js,ts}"],
-        },
+        extends: true,
+        plugins: [namespaceTests({ exclude: libraries })],
+        test: { name: "unit", environment: "node", include: ["src/**/*.test.ts"] },
       },
     ],
   },
