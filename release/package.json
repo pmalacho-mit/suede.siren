@@ -1,0 +1,8 @@
+{
+  "name": "suede.siren",
+  "private": true,
+  "type": "module",
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  }
+}

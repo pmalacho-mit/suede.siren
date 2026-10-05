@@ -1,8 +1,11 @@
 {
-	"name": "snippet-renderer-suede",
+	"name": "suede.siren-dev",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"workspaces": [
+		"release"
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
