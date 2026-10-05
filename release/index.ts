@@ -104,7 +104,7 @@ export namespace renderable {
    * @example
    * ```svelte
    * <script lang="ts" module>
-   *   import { renderer, renderable, type InitialRenderables } from "snippet-renderer-suede";
+   *   import { renderer, renderable, type InitialRenderables } from "suede.siren";
    *
    *   export class Model {
    *     requiredItem = renderable("single", renderable.required);
