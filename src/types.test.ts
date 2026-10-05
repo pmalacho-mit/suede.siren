@@ -1,4 +1,4 @@
-import { describe, test, expectTypeOf } from "vitest";
+import { describe, test, expect, expectTypeOf } from "vitest";
 import { renderable } from "../release";
 import type {
   renderableSnippet,
@@ -155,13 +155,13 @@ describe("ExtractRenderableEntry", () => {
 
     expectTypeOf<InitialRenderables<typeof cases>>().toEqualTypeOf<
       Maybe<{
-        renderables: RenderablesFactory<typeof cases>;
+        renderables?: RenderablesFactory<typeof cases>;
       }>
     >();
 
     expectTypeOf<InitialRenderables<typeof cases.custom>>().toEqualTypeOf<
       Maybe<{
-        renderables: RenderablesFactory<typeof cases.custom>;
+        renderables?: RenderablesFactory<typeof cases.custom>;
       }>
     >();
 
@@ -174,6 +174,11 @@ describe("ExtractRenderableEntry", () => {
     >().toEqualTypeOf<{
       renderables: RenderablesFactory<typeof cases.custom.required>;
     }>();
+    // expectTypeOf is checked by `npm run check`, not at run time: these check the cases themselves
+    expect(cases.optional.current).toBeUndefined();
+    expect(cases.custom.required.standalone.current).toMatchObject({
+      dummy: 42,
+    });
   });
 
   test("multi", () => {
@@ -341,13 +346,13 @@ describe("ExtractRenderableEntry", () => {
 
     expectTypeOf<InitialRenderables<typeof cases>>().toEqualTypeOf<
       Maybe<{
-        renderables: RenderablesFactory<typeof cases>;
+        renderables?: RenderablesFactory<typeof cases>;
       }>
     >();
 
     expectTypeOf<InitialRenderables<typeof cases.custom>>().toEqualTypeOf<
       Maybe<{
-        renderables: RenderablesFactory<typeof cases.custom>;
+        renderables?: RenderablesFactory<typeof cases.custom>;
       }>
     >();
 
@@ -360,5 +365,11 @@ describe("ExtractRenderableEntry", () => {
     >().toEqualTypeOf<{
       renderables: RenderablesFactory<typeof cases.custom.required>;
     }>();
+    // expectTypeOf is checked by `npm run check`, not at run time: these check the cases themselves
+    expect(cases.optional.current).toBeUndefined();
+    expect(cases.custom.required.standaloneArray.current).toMatchObject([
+      { dummy: 1 },
+      { dummy: 2 },
+    ]);
   });
 });
