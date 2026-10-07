@@ -19,7 +19,7 @@
   import type Self from "./Custom.svelte";
   import type { Model as SelfModel } from "./Custom.svelte";
   // the snippets below are examples only; importing the DSL is what marks them
-  import type { Test } from "../../../suede.sweater-vest/dsl.import.meta.vitest";
+  import type * as _ from "../../../suede.sweater-vest/dsl.import.meta.vitest";
 
   let { model }: { model: Model } = $props();
 </script>
