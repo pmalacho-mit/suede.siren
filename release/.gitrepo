@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/pmalacho-mit/suede.siren.git
 branch = release
-	commit = f932cd8a826d5713629068fdebe1f79802b93f2a
-	parent = f18f6065852972143ba1c1461060850a34a5f246
+	commit = 67d259b9f47e19382d31571338bf94439543c2e5
+	parent = 7950faf27cbd62b3e1f5195df85b1972976b6b7a
 	method = merge
 	cmdver = 0.4.9
